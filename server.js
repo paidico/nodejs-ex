@@ -93,7 +93,7 @@ app.get('/pagecount', function (req, res) {
 });
 
 app.post('/test', function (req, res) {
-    var message = 'IP - ' + req.ips;
+    var message = 'IP - ' + req.ip;
     console.log(message);
     res.send('{"return": "'+message+'"}');
 });
