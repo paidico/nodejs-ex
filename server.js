@@ -92,6 +92,12 @@ app.get('/pagecount', function (req, res) {
   }
 });
 
+app.post('/test', function (req, res) {
+    var message = 'IP - ' + req.ips;
+    console.log(message);
+    res.send('{"return": "'+message+'"}');
+});
+
 // error handling
 app.use(function(err, req, res, next){
   console.error(err.stack);
